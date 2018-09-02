@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/chartStyle.css">
+		<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+				<!--CSS-->
+		<title>Wetterstation</title>
+	</head>
+	<body>
+		<!--Kopf-->
+		<div id="kopfzeile">
+			<div id="titel"> 
+				Wetterstation
+			</div>
+		</div>
+
+		<!--Sensor Auswahlbereich-->
+		<div class="buttonContainer">
+			<button onclick="setSensor(1)">Temperatur</button>
+			<button onclick="setSensor(2)">Feuchte</button>
+			<button onclick="setSensor(3)">Druck</button>
+			<button onclick="setSensor(4)">Lichtstärke</button>
+		</div>
+		
+		<!--Container für Trenddaten-->
+		<div class="chartContainer">			
+			<canvas class="chart" id="LineChart0"></canvas>
+		</div>
+		
+		<!--Container für Bedienung-->
+		<div class="buttonContainer">
+	 		<input type="datetime-local" onClick="setDate()" id="scheduler">
+			<button onclick="setDateRange('hour')">Stunde</button>
+			<button onclick="setDateRange('day')">Tag</button>
+			<button onclick="setDateRange('week')">Woche</button>
+			<button onclick="setDateRange('month')">Monat</button>
+		</div>
+		
+		<!--Fuss-->
+		<div id="fusszeile">
+			<div id="running_clock"></div>
+		</div>
+		<script type="text/javascript" src="js/footerScript.js"></script>
+		
+		
+		<!--Importe-->
+		<!--Chart.js Library für Graphen-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<!--Ajax/Json Library für php/DB Request-->
+		<script src="https://code.jquery.com/jquery-latest.js"></script>
+		
+		<!--Scripts für Trenddaten anzeige inkl Serverdaten auslesen-->
+		<script src="js/chartScript.js"></script>
+
+	</body>
+</html>
