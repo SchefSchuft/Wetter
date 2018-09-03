@@ -263,7 +263,7 @@ function refreshChart(chartInterface){
 				  "start": dateObjectToDbString(chartInterface.startDate),
 				  "end": dateObjectToDbString(chartInterface.endDate)};
 	//Ziel-php Pfad
-	var url = location.origin + "/php/dbInterface.php";
+	var url = location.origin + "/wetter/php/dbInterface.php";
 	//Ajax Request
 	$.ajax({
 		type: "POST",							//Art des Requests
